@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Project concieved for Folklore Archives course with Barbara Hillers
+All data and images from duchas.ie
 
-Things you may want to cover:
+Map generated with ArcGIS online
 
-* Ruby version
+App is currently deployed at https://fathomless-oasis-86023.herokuapp.com/
 
-* System dependencies
+Ruby version 2.7.0 -- requires heroku deployment at heroku-18 stack
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Database is Postgres
