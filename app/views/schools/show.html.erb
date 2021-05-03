@@ -1,0 +1,9 @@
+
+<h1><%= @schools.id %></h1>
+<ul>
+  <% @schools.stories.each do |story| %>
+    <li>
+      <%= link_to story.title, story %>
+    </li>
+  <% end %>
+</ul>

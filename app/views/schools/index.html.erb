@@ -1,0 +1,12 @@
+<h1>Schools Index</h1>
+<ul>
+  <% @schools.each do |school| %>
+    <li>
+      <%= link_to school.name, school %>
+    </li>
+  <% end %>
+</ul>
+
+<p><button class="w3-button w3-light-grey w3-section" type="submit">
+<%= link_to "Submit Your Own!", new_story_path %>
+</p>

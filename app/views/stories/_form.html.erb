@@ -1,0 +1,46 @@
+<%= form_with model: story do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+    <% story.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :location %><br>
+    <%= form.text_field :location %>
+  </div>
+
+  <div>
+    <%= form.label :transcript %><br>
+    <%= form.text_area :transcript %>
+    <% story.errors.full_messages_for(:body).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :collector %><br>
+    <%= form.text_field :collector %>
+  </div>
+
+  <div>
+    <%= form.label :collectorage %><br>
+    <%= form.text_field :collectorage %>
+  </div>
+
+  <div>
+    <%= form.label :informant %><br>
+    <%= form.text_field :informant %>
+  </div>
+
+  <div>
+    <%= form.label :informantage %><br>
+    <%= form.text_field :informantage %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

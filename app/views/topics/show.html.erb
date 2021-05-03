@@ -1,0 +1,9 @@
+
+<h1><%= @topics.id %></h1>
+<ul>
+  <% @topics.stories.each do |story| %>
+    <li>
+      <%= link_to story.title, story %>
+    </li>
+  <% end %>
+</ul>

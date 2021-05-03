@@ -1,0 +1,73 @@
+
+<!-- Transcript Section -->
+<div class="w3-row w3-padding-64" id="about">
+  <div class="w3-col m6 w3-padding-large w3-hide-small">
+   <img src=<%= @story.photourl %> alt="Image of handwritten page" width="500" height="650">
+  </div>
+
+  <div class="w3-col m6 w3-padding-large">
+    <h1 class="w3-center">
+    <%= @story.title %></h1><br>
+    <p class="w3-large">
+      School: <%= @story.school.id %>
+    </p>
+    <p class="w3-large">
+      Location: <%= @story.location %>
+    </p>
+    <p class="w3-large">
+      Teacher: <%= @story.teacher %>
+    </p>
+    <p class="w3-large">
+      Collector: <%= @story.collector %>
+    </p>
+    <p class="w3-large">
+      Informant: <%= @story.informant %>
+    </p>
+    <h5 class="w3-center">Transcript</h5>
+    <p class="w3-large">
+      <%= @story.transcript %>
+    </p>
+    <h5 class="w3-center">
+      <a href=<%= @story.url %> >Duchas</a>
+    </h5>
+    <p class="w3-large">
+
+    </p>
+  </div>
+</div>
+
+
+<!-- Comments Section -->
+<div class="w3-row w3-padding-64" id="menu">
+  <div class="w3-col l6 w3-padding-large">
+    <h1 class="w3-center">Comments</h1><br>
+    <% @story.comments.each do |comment| %>
+      <p>
+        <strong>Commenter:</strong>
+        <%= comment.commenter %>
+      </p>
+
+      <p>
+        <strong>Comment:</strong>
+        <%= comment.body %>
+      </p>
+    <% end %>
+
+    <h2>Add a comment:</h2>
+    <%= form_with model: [ @story, @story.comments.build ] do |form| %>
+      <p>
+        <%= form.label :commenter %><br>
+        <%= form.text_field :commenter %>
+      </p>
+      <p>
+        <%= form.label :body %><br>
+        <%= form.text_area :body %>
+      </p>
+      <p>
+        <%= form.submit %>
+      </p>
+    <% end %>
+
+  </div>
+
+<hr>
